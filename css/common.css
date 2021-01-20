@@ -1,0 +1,177 @@
+@font-face {
+    font-family: AppleSDGothicNeoM;
+    src: url(../images/AppleSDGothicNeoM.eot); 
+    src: local(☺),
+         url(../images/AppleSDGothicNeoM.woff2) format('woff2'), 
+         url(../images/AppleSDGothicNeoM.woff) format('woff'), 
+         url(../images/AppleSDGothicNeoM.ttf) format('truetype');
+  }
+
+/* RESET CSS  */
+* { margin:0; padding:0; box-sizing: border-box; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+ul, ol, dl { list-style:none; }
+a { color: #333; text-decoration: none; }
+table { border-collapse:collapse; border-spacing:0; }
+img { display: block; }
+
+/* DEFAULT CSS */
+body {
+    font-family: 'AppleSDGothicNeoM';
+    font-size: 16px;
+    color: #333;
+    background: #000;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body.not-scroll {
+    overflow: hidden;
+}
+
+.hidden,
+#skipNav {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1000%;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: #fff
+}
+
+.clearfix::before, 
+.clearfix::after {
+    display: block; content: ''; clear: both
+}
+
+/* ### HEADER ### */
+#headerArea {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    height: 50px;
+    background: rgba(0, 0, 0, .9);
+    border-bottom:1px solid #555;
+    transition: all .5s;
+    text-align: center;
+}
+
+#headerArea .headerInner {
+    width: 90%;
+    margin: 0 5%;
+}
+
+#headerArea h1 {
+    position: absolute;
+    width: 150px;
+    left: 0;
+    top: 0;
+}
+
+#headerArea h1 a {
+    display: block;
+    background: url(../images/lg-5.png) no-repeat;
+    width: 150px;
+    height: 100px;
+    text-indent: -999px;
+    overflow: hidden;
+    background-size: 150px
+}
+
+#headerArea #gnb {
+    width: 100%;
+    margin-top: 15px
+}
+
+#headerArea #gnb ul {
+    overflow: hidden
+}
+
+#headerArea #gnb ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+#headerArea #gnb ul li a {
+    display: block;
+    margin: 0 1em;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center
+}
+
+/* FOOTER */
+#footerArea {
+    height: 200px;
+    background: #333
+}
+
+#footerArea .foot_logo {
+    display: block;
+    padding-top: 30px;
+    text-align: center
+}
+
+#footerArea .foot_logo img {
+    width: 200px
+}
+
+#footerArea p {
+    padding-top: 30px;
+    font-size: .8em;
+    color: #fff;
+    text-align: center
+}
+
+a.top_btn {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 3%;
+    z-index: 1000;
+    text-align: center;
+}
+
+a.top_btn ion-icon {
+    font-size: 2.7rem;
+    color: #ccc
+}
+
+/* PC */
+@media screen and (max-width:1280px) {}
+
+
+/* TABLET */
+@media screen and (max-width:1024px) {}
+
+/* SMALL TABLET */
+@media screen and (max-width:768px) {
+    #headerArea .headerInner {
+        width: auto;
+        margin: 0
+    }
+
+    #headerArea h1 a {
+        display: none;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width:640px) {}
+
+/* MIN SIZE */
+@media screen and (max-width:480px) {
+    #wrap {
+        min-width: 320px;
+    }
+}
+
+
